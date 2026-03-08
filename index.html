@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -16,7 +17,6 @@
 --card:#111827;
 --text:#e5e7eb;
 --accent:#3b82f6;
---secondary:#9333ea;
 }
 
 body.light{
@@ -49,7 +49,6 @@ position:sticky;
 top:0;
 background:rgba(0,0,0,0.2);
 backdrop-filter:blur(10px);
-z-index:100;
 }
 
 nav a{
@@ -104,40 +103,42 @@ text-decoration:none;
 }
 
 .hero img{
-width:300px;
+width:280px;
 border-radius:20px;
 box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:80px 10%;
 }
 
 h2{
-margin-bottom:40px;
+margin-bottom:30px;
 color:var(--accent);
 }
 
-/* PROJECTS */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
+/* CARDS */
 
 .card{
 background:var(--card);
 padding:25px;
 border-radius:12px;
+margin-bottom:25px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
+transform:translateY(-5px);
+}
+
+/* PROJECT GRID */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 /* SKILLS */
@@ -151,7 +152,7 @@ gap:12px;
 .skill{
 background:var(--accent);
 padding:8px 16px;
-border-radius:30px;
+border-radius:25px;
 font-size:0.9rem;
 }
 
@@ -164,10 +165,6 @@ padding-left:25px;
 
 .timeline-item{
 margin-bottom:30px;
-}
-
-.timeline-item h3{
-margin-bottom:5px;
 }
 
 /* CONTACT */
@@ -196,12 +193,13 @@ text-align:center;
 }
 
 .hero img{
-margin-top:40px;
+margin-top:30px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -211,6 +209,7 @@ margin-top:40px;
 <h3>Tom Thomson</h3>
 
 <div>
+<a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
@@ -224,12 +223,12 @@ margin-top:40px;
 
 <div class="hero-text">
 
-<h1>Hi I'm <span>Tom Thomson</span></h1>
+<h1>Hi, I'm <span>Tom Thomson</span></h1>
 
 <p>
 Software Engineer with experience building enterprise backend systems.
 Previously worked at Tata Consultancy Services developing airline reservation platforms.
-Currently pursuing MSc Computer Science at the University of Warwick.
+Currently pursuing MSc Computer Science at the University of Warwick with a strong interest in AI and scalable backend systems.
 </p>
 
 <a class="btn" href="#projects">View Projects</a>
@@ -240,6 +239,30 @@ Currently pursuing MSc Computer Science at the University of Warwick.
 
 </section>
 
+<section id="about">
+
+<h2>Expertise & Learning at University of Warwick</h2>
+
+<div class="card">
+
+<p>
+During my MSc at the University of Warwick I developed strong foundations in machine learning, data analytics, and computer vision. 
+I worked on coursework involving regression modelling, convolutional neural networks, and data analytics pipelines.
+</p>
+
+<p>
+Using tools such as Python and WEKA, I built machine learning models and analysed datasets to extract insights. 
+I studied deep learning concepts including CNN architectures, feature extraction, and transfer learning techniques used in modern AI systems.
+</p>
+
+<p>
+These projects helped me understand the complete machine learning workflow from data preprocessing to model evaluation.
+</p>
+
+</div>
+
+</section>
+
 <section id="projects">
 
 <h2>Projects</h2>
@@ -247,27 +270,52 @@ Currently pursuing MSc Computer Science at the University of Warwick.
 <div class="projects">
 
 <div class="card">
+
 <h3>AI Interview Preparation Platform</h3>
-<p>AI powered platform that simulates mock interviews and evaluates answers using NLP.</p>
-<a href="https://github.com/tomthomson1017">GitHub →</a>
+
+<p>
+Built an AI powered web platform to simulate interview practice sessions.
+The system evaluates user responses using natural language processing techniques.
+</p>
+
+<p><b>Tech Used:</b> Python, JavaScript, HTML, NLP</p>
+
 </div>
 
 <div class="card">
+
 <h3>Mental Health Tracker</h3>
-<p>Web application that tracks mood patterns and provides insights into mental wellbeing.</p>
-<a href="https://github.com/tomthomson1017">GitHub →</a>
+
+<p>
+Developed a web application that allows users to record mood entries and analyse emotional patterns over time.
+</p>
+
+<p><b>Tech Used:</b> JavaScript, Node.js, Database storage</p>
+
 </div>
 
 <div class="card">
+
 <h3>AI Personal Assistant</h3>
-<p>AI chatbot assistant designed to help students with study tasks and Q&A.</p>
-<a href="https://github.com/tomthomson1017">GitHub →</a>
+
+<p>
+Designed an intelligent chatbot style assistant to help students with study related questions and guidance.
+</p>
+
+<p><b>Tech Used:</b> AI language models, Web technologies</p>
+
 </div>
 
 <div class="card">
-<h3>Reprography Management System</h3>
-<p>Flutter app to manage printing services and operations for a college center.</p>
-<a href="https://github.com/tomthomson1017">GitHub →</a>
+
+<h3>Reprographic Centre Management App</h3>
+
+<p>
+Built a Flutter mobile application that manages printing service requests and tracks order status for a college reprographic center.
+</p>
+
+<p><b>Tech Used:</b> Flutter, Mobile UI, Database</p>
+
 </div>
 
 </div>
@@ -286,7 +334,7 @@ Currently pursuing MSc Computer Science at the University of Warwick.
 <span class="skill">JavaScript</span>
 <span class="skill">React</span>
 <span class="skill">Node.js</span>
-<span class="skill">Express</span>
+<span class="skill">Express.js</span>
 <span class="skill">SQL</span>
 <span class="skill">MySQL</span>
 <span class="skill">Azure</span>
@@ -306,12 +354,16 @@ Currently pursuing MSc Computer Science at the University of Warwick.
 <div class="timeline-item">
 
 <h3>Software Engineer — Tata Consultancy Services</h3>
+
 <p>2024 — 2025</p>
 
 <p>
-Worked on airline reservation systems using Java and enterprise backend services.
-Developed APIs, integrated databases, and worked within Agile teams.
-Mentored junior developers and contributed to production systems.
+Worked as a Java backend developer in the airline domain building enterprise reservation systems.
+Developed backend services and APIs, handled database integrations, and worked in Agile teams to deliver production software.
+</p>
+
+<p>
+Also supported debugging production issues and mentored junior developers and interns.
 </p>
 
 </div>
@@ -319,14 +371,22 @@ Mentored junior developers and contributed to production systems.
 <div class="timeline-item">
 
 <h3>MSc Computer Science — University of Warwick</h3>
+
 <p>2025 — 2026</p>
+
+<p>
+Focused on machine learning, data analytics, and computer vision with hands-on coursework and technical projects.
+</p>
 
 </div>
 
 <div class="timeline-item">
 
 <h3>B.Tech Computer Science — Kerala Technological University</h3>
+
 <p>2019 — 2023</p>
+
+<p>Graduated with distinction (CGPA 8.04)</p>
 
 </div>
 
@@ -341,8 +401,11 @@ Mentored junior developers and contributed to production systems.
 <div class="contact">
 
 <a href="mailto:tomthomson1017@gmail.com">Email</a>
+
 <a href="https://github.com/tomthomson1017">GitHub</a>
+
 <a href="https://www.linkedin.com/in/tom-thomson-b08624212">LinkedIn</a>
+
 <a href="https://tomthomson1017.github.io/tom-portfolio/">Portfolio</a>
 
 </div>
@@ -358,12 +421,11 @@ Mentored junior developers and contributed to production systems.
 <script>
 
 function toggleMode(){
-
 document.body.classList.toggle("light")
-
 }
 
 </script>
 
 </body>
+
 </html>
